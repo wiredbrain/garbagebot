@@ -1,0 +1,107 @@
+SE 2.3
+
+A Python Stream Editor by (c) 2006 Frederic Rentsch 
+
+Freeware in exchange for authorship credit
+
+------------------------------------------------------------------------------------------------------
+
+
+Package
+
+   SE-2.3.zip
+
+
+Contains
+
+   SEL.PY          (Python source)
+   SE.PY           (Python source)
+   FORMEX.py       (Python source. Experimental derivation expanding arithmetic formulas interactively.)
+   SE-DOC.HTM      (Manual)
+   pkg-info
+   readme          (This file)       
+   SE-DOC-TEST.PY  (Testing loop cycling through the manual interactively)
+   htm2iso.se      (A sample definition file, translating HTM ampersand escapes to bytes)
+
+
+
+To get started
+
+   Open the HTM manual and a Python IDLE window. 
+
+   >>> execfile ('(your path)/se-demo.py')
+   >>> run_demo ()
+
+   You see this prompt:
+
+   Number (e.g. 2.3.1.), N(ext) or Q(uit)? >
+
+   To jump to a specific paragraph, enter its number:
+
+   Number (e.g. 2.3.1.), N(ext) or Q(uit)? > 2.3.2.
+
+   run_demo () will run those of the manual's examples that can be demoed in this manner,
+   actually running the example and comparing the result it with the result in the manual.
+   Some examples don't check out if the objective is to clarify a likely misconception.
+
+
+
+------------------------------------------------------------------------------------------------------
+
+
+Development History
+
+
+Version 1       SR.EXE - (Search and Replace) MS-DOS-command-line program for batch processing. 
+
+   1991  V1.x   No regular expressions.
+
+
+
+Version 2       SEL.py, SE.py - (Stream Editor) Object-oriented functional transcript with regular expressions added.  
+
+   2006  V2.1b  Released July 13, 2006
+                
+         V2.2b  Released August 8 2006
+
+                A few minor fixes
+
+         V2.3   Released October 13 2006
+
+                Method do_file_name () has file-type output missing.
+                Fixed: 9/25/2006 
+ 
+                SEL.py line 352. OSError deleted: Pass by all exceptions. If an input 
+                string contains a null byte, os.stat () raises a ValueError. All os.stat () 
+                errors can be passed. No need to list them.
+                Fixed: 10/1/2006
+
+                The target stream being open ended the binary search may overshoot by several 
+                places in the sorted target list. Backtstepping one place was statistically 
+                correct most of the time but methodically incorrect and lead to occasional 
+                missed replacements. 
+                Fixed: 10/11/2006
+                File objects seem to get their file pointers screwed up. Flushing seemed to be 
+                the remedy, but writes still failed following an open-ended read. The following 
+                (weird) fix solved the problem: f.seek (f.tell ()).
+                Fixed: 10/2/2006
+
+                Replace the term 'chain' with the more suggestive term 'cascade' for 
+                sequential translations.
+                Fixed: 10/13/2006
+
+
+------------------------------------------------------------------------------------------------------
+
+Planned Enhancements
+
+Version 3       SEL.py, SE.py
+
+   2007 V3.x    Will expand numbered target place holders as returned by _sre.SRE_Match objects'
+                group (number) method for parenthesized regex substrings. 
+                   The target place holder is the equal sign. If a number follows, it will identify 
+                the regex parenthsized group, like this: '=3'
+
+                >>> Rearrange = SE.SE ('"~([A-Z][a-z]*)\s+([A-Z]).*?([A-Z][a-z]*)~=Name: =3, First Name: =1"')
+                >>> Rearrange ('Mathew M. Milligram')
+                Name: Milligram, First Name: Mathew

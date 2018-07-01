@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<head>
+		<title>{{ title }}</title>
+		<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+	</head>
+	<body>
+		<h1>Hello World!</h1>
+		<h2>The date and time on the server is: {{ time }}</h2>
+		<br/>
+		<br/>
+		<div style='text-align: center;'>
+			<button name='forward' id='forward' value='forward'>Forward</button>
+		</div>
+		<div style='text-align: center;'>
+			<button name='left' id='left' value='left'>Left</button>
+			<button name='right' id='right' value='right'>Right</button>
+		</div>
+		<div style='text-align: center;'>
+			<button name='backward' id='backward' value='backward'>Backward</button>
+		</div>
+		<script type='txt/javascript'
+		$(document).ready(function() {
+			$("button").click(function() {$.post("/move", {movement: this.value})});
+		});
+		</script>
+	</body>
+</html>

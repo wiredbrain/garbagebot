@@ -1,0 +1,44 @@
+#!/Users/samfinton/Documents/Yukon College Work/GarbageBot/garbagebot/bin/python3.6
+
+import sys
+from itertools import chain
+from protobuf3.compiler.plugin_api import CodeGeneratorResponse, CodeGeneratorRequest
+from protobuf3.compiler import Compiler
+
+data = sys.stdin.buffer.read()
+
+msg = CodeGeneratorRequest()
+msg.parse_from_bytes(data)
+
+response = CodeGeneratorResponse()
+
+top_level_elements = {}
+desc_map = {}
+files_for_compiling = set()
+
+for file_descriptor in msg.proto_file:
+    desc_map[file_descriptor.name] = file_descriptor
+
+    for item in chain(file_descriptor.message_type, file_descriptor.enum_type):
+        top_level_elements[item.name] = file_descriptor.name
+
+
+def add_file_to_queue(name):
+    files_for_compiling.add(name)
+    for dep in (desc_map[name]).dependency:
+        add_file_to_queue(dep)
+
+
+for file_name in msg.file_to_generate:
+    add_file_to_queue(file_name)
+
+for file_name in files_for_compiling:
+    compiler = Compiler(desc_map[file_name], top_level_elements)
+
+    file = CodeGeneratorResponse.File()
+    file.name = compiler.return_file_name()
+    file.content = compiler.return_file_contents()
+
+    response.file.append(file)
+
+sys.stdout.buffer.write(response.encode_to_bytes())

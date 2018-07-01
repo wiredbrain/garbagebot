@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kidscamp-207220",
+  "private_key_id": "88df0e22019d6bdb95c8717387f38816184a88cd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEuwIBADANBgkqhkiG9w0BAQEFAASCBKUwggShAgEAAoIBAQDTLw+b8i+IvOwT\nvIGb+QNMO1S+b4A9TAXjgJjUfAG9OJaUQ9jYPGhW24ZyqC0gtkUTitSc8SiRqWiP\nyv0OJMfaYum4s2A6DWQ5uc4H121sKBTNCpNiANR9sFmgcIg4N2HvCiheHfSy8Wwq\nVdel2irlsbp/HpFHaUrYBUIXEXnSeOBTrg9V4prm84We/wywPUFA+ac0OycT0pEz\nbjlGa8ZAO3XMM2xiXPaiHG92UmCHJ+QpGMy7hdIGKkoP8ix4oH9WpZp4RudzU4no\n3aWrPkLSaRiXf7pOBrUcouxairMW3PyL/xngrBVfsjaHTWPC5hwTTcSyQOr/Rnti\ngNTkgyofAgMBAAECgf9VysiMkda9tgIyAmKk+oRcc735n1J5lGjQA24S5E3QkSyb\nDvUI44F/x67W5XtvzpxBVCULnOzeP/Q6djxXgpmuHoDUiAqPiuEskk8g4GOTjLTm\nl2VIaw3oAbxncU/lhppCgd3kXkcKawmGKVlyBy9mIM2i1sguOpgtKfWvaWoUFkoE\nmMDkokKy92uoddEslrUFpfFpbKUbmyaz5KJeb+8ghG6tLQX0xtcekqzZXVgbFqKX\nwK4uXfofPrrWTTOdP135OS36EdoTWupvt+0IBNHbpVbNXi2+ABMWBITjBBmbyMbE\n7eKjuQBd2LaHfn33c6nrGzB2sW+ffmhBjawfq0ECgYEA8JJSwnMDh5WxGu5OZhYi\nfqe/aV3bdPvqKjmGsB8GyONZ6VeXP+lyfhW1IL3aW98uM/W7q1lzZtkkkHPS/OTp\n5uIWLVw/dsYnPeQgPWdOVEHS1ZPBDR/+FYN6iUbjwkGxKwfyjbcZdGhhsEvthDw0\nABIcomOkFLo+i8qaW+rTkKUCgYEA4LpAyTgSY7qL9+wPezG4lz+8yf9QyWYPJjdV\neb1fUiCxZw4wmuqjllexqMI3iuH8yZnLOilW89FmFvIyyGZMy5p90YovPxaCeNbe\n+hywTGgOZF+LB/xcxE8VqrJVvhCIaMTGA2CxDQ3XtomiSDz83Y4Q3nFdFX3RtSHX\n4SedcHMCgYAcor45KSmdZQMc2or4eeAHRX5yU1rBFQ9tkUVoB3luRim4rdVyJR6c\nxYa27AJm9yzvwGtjXRVwg55nl3Hg6nqxIe5T3ewr/jBDnLj9tiNLwj4PcDQFlO5Q\nr0LRvl90Cw/EuIB1v/rGsXoXWyJdoDDsZTuFVOj+EqFJUIeJM22VhQKBgQDG8dwc\nxrjw9NqolqB17WR+8XwOTyqTwPg0WtQevBlAuZSTqSo6WvKLTAMJZTaKitmhF7ek\nO6iwnHYGZk+yvW3K6W/tKqn87c5/b6liPjeMzKnBDhwk67KsT17dCJeDdVttdJXf\ns5/J8LFA9cNmtCcfdH9WjYFcX1BhTB6zQsDMJQKBgDT6nMljY4XxNsJocTjNFs8R\nGDf/4szFTrI9E6io4rWTc2FukM+1CS1DKLlHo2V9dTwBCW1FrrcrG2zsxcaK4ra7\nlF/lPw75dydzWrMyoy9bbY4VSS1wBuzInqlwDjmGD5L612UBWvKnOym4XbczK5l1\nE3G1WHyJLxE79TQ3cye+\n-----END PRIVATE KEY-----\n",
+  "client_email": "administrator@kidscamp-207220.iam.gserviceaccount.com",
+  "client_id": "102013121440029190940",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/administrator%40kidscamp-207220.iam.gserviceaccount.com"
+}

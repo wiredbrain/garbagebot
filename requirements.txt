@@ -81,5 +81,5 @@ six==1.11.0
 uritemplate==3.0.0
 urllib3==1.23
 watchdog==0.8.3
-Werkzeug==0.14.1
+Werkzeug==0.15.3
 zope.interface==4.5.0

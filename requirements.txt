@@ -74,7 +74,7 @@ python-dateutil==2.7.3
 pytz==2018.4
 PyYAML==3.12
 requests==2.19.1
-rsa==3.4.2
+rsa==4.7
 s3transfer==0.1.13
 SE==2.3
 six==1.11.0
